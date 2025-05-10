@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Formulario de area</h1>
+    <h1>Formulario de Computers</h1>
 
     <form action="{{ route('computer.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
