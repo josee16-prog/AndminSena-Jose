@@ -10,7 +10,7 @@ class TrainingCenterController extends Controller
 
     public function index(){
 
-        $trainingCenters = Training_center::all();
+        $trainingcenters = Training_center::all();
         return view('trainingcenter.index', compact('trainingcenters'));
 
     }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('cell_number');
 
             $table->unsignedBigInteger('course_id')->nullable();
-            $table->unsignedBigInteger('computer_id')->unique();
+            $table->unsignedBigInteger('computer_id')->nullable();
 
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->foreign('computer_id')->references('id')->on('computers')->onDelete('cascade');
