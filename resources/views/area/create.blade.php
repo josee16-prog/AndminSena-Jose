@@ -12,9 +12,11 @@
 
     <form action="{{ route('area.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="title">Nombre</label>
-        <input type="text" id="title" name="name">
-        <button type="submit">Enviar</button>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter area name">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-    
+
 @endsection

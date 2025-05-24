@@ -6,11 +6,15 @@
 
     <form action="{{ route('computer.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="number">Numero</label>
-        <input type="number" id="number" name="number"><br>
-        <label for="brand">Marca</label>
-        <input type="text" id="brand" name="brand"><br>
-        <button type="submit">Enviar</button>
+        <div class="mb-3">
+            <label for="number" class="form-label">Número</label>
+            <input type="number" class="form-control" id="number" name="number" placeholder="Enter course number">
+        </div>
+        <div class="mb-3">
+            <label for="brand" class="form-label">Marca</label>
+            <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter Brand">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-    
+
 @endsection
