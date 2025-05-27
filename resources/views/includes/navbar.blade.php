@@ -1,37 +1,46 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+{{-- Barra de navegación principal del sistema --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    {{-- Contenedor principal de la barra de navegación --}}
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+        {{-- Logo o nombre del sistema --}}
+        <a class="navbar-brand" href="#">AdminSena</a>
+
+        {{-- Botón de hamburguesa para menú móvil --}}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {{-- Menú de navegación colapsable --}}
+        <div class="collapse navbar-collapse" id="navbarNav">
+            {{-- Lista de enlaces de navegación --}}
+            <ul class="navbar-nav">
+                {{-- Enlace a la página de aprendices --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('apprentice.index') }}">Aprendices</a>
+                </li>
+                {{-- Enlace a la página de áreas --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('area.index') }}">Areas</a>
+                </li>
+                {{-- Enlace a la página de computadores --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('computer.index') }}">Computadores</a>
+                </li>
+                {{-- Enlace a la página de cursos --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('course.index') }}">Cursos</a>
+                </li>
+                {{-- Enlace a la página de profesores --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('teacher.index') }}">Profesores</a>
+                </li>
+                {{-- Enlace a la página de centros de formación --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('trainingcenter.index') }}">Centros de formación</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 
