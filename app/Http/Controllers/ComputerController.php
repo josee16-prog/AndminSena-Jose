@@ -41,9 +41,17 @@ class ComputerController extends Controller
         // Asigna los valores desde la request
         $computer->number=$request->number;
         $computer->brand=$request->brand;
+
+        //ADJUNTAR EL PDF
+        $file=$request->file("urlPdf");
+        $nombreArchivo = "pdf_".time().".".$file->guessExtension();
+       //guardado del archivo
+        $request->file('urlPdf')->storeAs('imagenes', $nombreArchivo, 'public');
+        $computer->urlPdf = $nombreArchivo;
         // Guarda el computador en la base de datos
         $computer->save();
-        return $computer;
+        // Retorna el computador creado
+        return redirect()->route('computer.index');
     }
 
     /**

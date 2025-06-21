@@ -40,7 +40,7 @@
             <label for="training_centers">Centro de formación</label>
             <select name="training_centers_id" class="form-select">
                 @foreach ($training_centers as $training_center)
-                    <option value="{{ $training_center->id }}">{{ $training_center->id }} - {{ $training_centers->name }} - {{ $training_center->location }}</option>
+                    <option value="{{ $training_center->id }}">{{ $training_center->id }} - {{ $training_center->name }} - {{ $training_center->location }}</option>
                 @endforeach
             </select>
         </div>

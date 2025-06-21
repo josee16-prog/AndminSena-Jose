@@ -32,6 +32,8 @@
                     <th scope="row">{{$computer['id']}}</th>
                     <td>{{$computer['number']}}</td>
                     <td>{{$computer['brand']}}</td>
+                    <td>{{$computer['urlPdf']}}</td>
+                    <td><iframe src="{{'http://localhost/AdminSena/public/storage/imagenes/' .$computer->urlPdf }}" frameborder="0"></iframe></td>
 
                     {{-- Botones de acción para cada computador --}}
                     <td>

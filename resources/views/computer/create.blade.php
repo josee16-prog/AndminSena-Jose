@@ -25,6 +25,11 @@
             <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter Brand">
         </div>
 
+        <div class="mb-3">
+            <label for="Adjuntar" class="form-label">Adjuntar archivo PDF</label>
+            <input type="file" class="form-control" id="Adjuntar" name="urlPdf" placeholder="Enter Model" accept="pdf/*">
+        </div>
+
         {{-- Botón para enviar el formulario --}}
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
